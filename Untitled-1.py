@@ -25,7 +25,8 @@ def Scientific():
 def Standard():
     root.resizable(width=False, height=False)
     root.geometry("480x568+0+0")
-    
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~==MENU==~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 menubar = Menu(calc)
 filemenu = Menu(menubar, tearoff=0)
 
