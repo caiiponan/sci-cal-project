@@ -201,6 +201,8 @@ class Calc():
 
 added_value = Calc()
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GENERAL DISPLAY~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 txtDisplay = Entry(calc, font = ('arial', 20, 'bold'), bg = "powder blue", bd = 30, width = 28, justify = RIGHT)
 txtDisplay.grid(row = 0, column = 0, columnspan = 4, pady = 1)
 txtDisplay.insert(0, "0")
@@ -215,6 +217,8 @@ for j in range(2, 5):
         btn[i]["command"] = lambda x = numberpad[i]: added_value.numberEnter(x)
         i += 1
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Standard Functions Part~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 btnClear = Button(calc, text = chr(67), width = 6, height = 2, font = ('arial', 20, 'bold'), bd = 4, bg = "orange", command = added_value.clear_Entry).grid(row = 1, column = 0, pady = 1)
 btnAllClear = Button(calc, text = chr(67) + chr(69), width = 6, height = 2, font = ('arial', 20, 'bold'), bd = 4, bg = "orange", command = added_value.all_Clear_Entry).grid(row = 1, column = 1, pady = 1)
 btnSqrt = Button(calc, text = "√", width = 6, height = 2, font = ('arial', 20, 'bold'), bd = 4, bg = "powder blue", command = added_value.squared).grid(row = 1, column = 2, pady = 1)
@@ -227,7 +231,7 @@ btnDot = Button(calc, text = ".", width = 6, height = 2, font = ('arial', 20, 'b
 btnPM = Button(calc, text = chr(177), width = 6, height = 2, font = ('arial', 20, 'bold'), bd = 4, bg = "powder blue", command = added_value.mathsPM).grid(row = 5, column = 2, pady = 1)
 btnEqual = Button(calc, text = "=", width = 6, height = 2, font = ('arial', 20, 'bold'), bd = 4, bg = "powder blue", command = added_value.sum_of_total).grid(row = 5, column = 3, pady = 1)
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Sci-cal Part~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Sci-cal Functions Part~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 btnPi = Button(calc, text = "π", width = 6, height = 2, font = ('arial', 20, 'bold'), bd = 4, bg = "powder blue", command = added_value.Pi).grid(row = 1, column = 4, pady = 1)
 btnCos = Button(calc, text = "cos", width = 6, height = 2, font = ('arial', 20, 'bold'), bd = 4, bg = "powder blue", command = added_value.cos).grid(row = 1, column = 5, pady = 1)
@@ -256,6 +260,8 @@ btnLgamma = Button(calc, text = "lgamma", width = 6, height = 2, font = ('arial'
 
 lblDisplay = Label(calc, text = "Scientific Calculator", font = ('arial', 30, 'bold'),justify=CENTER)
 lblDisplay.grid(row = 0, column = 4, columnspan = 4)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~EXIT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 def iExit():
     iExit = tkinter.messagebox.askyesno("Scientific Calculator", "Confirm if you want to exit")
